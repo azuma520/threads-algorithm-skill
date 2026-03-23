@@ -1,0 +1,38 @@
+{
+  "skill_name": "threads-algorithm",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "我的 Threads 帳號主要分享烘焙內容，大概 2000 追蹤，最近覺得觸及越來越差，不知道怎麼經營下去。可以幫我看看嗎？",
+      "expected_output": "應該進入帳號健檢模式，先問更多問題了解現況（發文頻率、最近爆文是什麼、互動習慣、有沒有蹭過不相關話題），然後基於 Creator Embedding 和 Audience Affinity 分析可能原因，給出具體的經營方向建議。",
+      "assertions": [
+        {"name": "asks_clarifying_questions", "description": "Asks clarifying questions about situation before giving advice"},
+        {"name": "mentions_creator_embedding", "description": "References account positioning/semantic tagging concept"},
+        {"name": "gives_specific_direction", "description": "Provides specific actionable next steps"},
+        {"name": "consultant_tone", "description": "Tone is consultant-like, not textbook or FAQ"}
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "我昨天發了一篇關於 SEO 的 Threads 貼文爆了，留言超多，接下來我該怎麼做？幫我規劃一下這週的節奏。",
+      "expected_output": "應該進入策畫模式：1. 先確認現在互動榨乾了沒（留言都回了嗎），2. 建議休息 24-48 小時，3. 規劃下一篇用不同角度切入（弱相關但同圈子），4. 給出這週的具體節奏時間表。不是只回答『休息一下』就結束。",
+      "assertions": [
+        {"name": "suggests_rest_period", "description": "Suggests 24-48h rest with reasoning"},
+        {"name": "concrete_weekly_plan", "description": "Provides concrete weekly rhythm/schedule"},
+        {"name": "angle_switching", "description": "Advises switching angles, not same-topic extension"},
+        {"name": "interaction_maximization", "description": "Mentions maximizing current post interactions first"}
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "我在 Threads 上發了一篇我覺得寫得很好的文章，但觸及率超低幾乎沒人看到，到底怎麼回事？我的帳號有 3000 追蹤。",
+      "expected_output": "應該進入診斷模式，帶用戶走 post-diagnosis 的六關排查流程：1. 開頭有沒有 clickbait？2. 是不是太快發了？3. 受眾在線時間？4. 帳號定位偏移？5. 互動品質？6. Affinity 衰減？逐關問問題，找到命中的原因後給具體行動建議。",
+      "assertions": [
+        {"name": "systematic_diagnosis", "description": "Uses systematic sequential diagnostic approach"},
+        {"name": "asks_diagnostic_questions", "description": "Asks specific questions per checkpoint"},
+        {"name": "actionable_next_step", "description": "Ends with concrete action items"},
+        {"name": "acknowledges_uncertainty", "description": "Acknowledges algorithmic uncertainty"}
+      ]
+    }
+  ]
+}
